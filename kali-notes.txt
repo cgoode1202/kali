@@ -1,7 +1,9 @@
 rCtrl + F = enter full screen mode
 rCtrl + C = exit full screen mode
 
-nmap -sV 10.10.33.222
+sudo openvpn /home/chris/Downloads/cgoode1202.ovpn
+
+nmap -A -sC -sV -oN vulnversity.nmap 10.10.21.79
 -sV	Attempts to determine the version of the services running
 -p <x> or -p-	Port scan for port <x> or scan all ports
 -Pn	Disable host discovery and just scan for open ports
@@ -12,7 +14,7 @@ nmap -sV 10.10.33.222
 -sS	TCP SYN port scan
 
 GoBuster
-gobuster dir -u http://10.10.33.222:3333 -w /usr/share/wordlists/dirb/common.txt
+gobuster dir -u http://10.10.21.79:3333 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
 -e	Print the full URLs in your console
 -u	The target URL
 -w	Path to your wordlist
