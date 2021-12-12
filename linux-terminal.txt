@@ -26,3 +26,6 @@ touch <file name>
 
  // read text from file
  cat <filename>
+
+// search for a file
+locate <search text>
