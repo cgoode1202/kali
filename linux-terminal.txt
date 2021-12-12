@@ -1,0 +1,28 @@
+// display manual of a command
+man <command name>
+
+info
+
+//update latest versions of apt
+sudo apt update
+
+//install new program
+sudo apt install
+
+// get help for a command
+<command> --help
+
+// list all files + hidden files
+ls -a
+
+// displays bash command history (last 1000 commands)
+history
+
+// create a new empty file
+touch <file name>
+
+// write text to file
+ cat > <filename>
+
+ // read text from file
+ cat <filename>
