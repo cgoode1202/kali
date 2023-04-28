@@ -30,3 +30,15 @@ gobuster dir -u http://10.10.21.79:3333 -w /usr/share/wordlists/dirbuster/direct
 -U and -P	Username and Password for Basic Auth
 -p <x>	Proxy to use for requests
 -c <http cookies>	Specify a cookie for simulating your auth
+
+Metasploit
+msfconsole to launch metapsloit framework
+use exploit/windows/smb/ms17_010_eternalblue
+show options
+show payloads/auxillary/exploit
+info exploit/windows/smb/ms17_010_eternalblue
+back – exits exploit context
+search ms17-010 (or any other exploit)
+set PARAMETER_NAME VALUE
+unset – clear parameters
+setg – set values that will be used for all modules
