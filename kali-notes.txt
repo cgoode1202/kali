@@ -12,6 +12,15 @@ nmap -A -sC -sV -oN vulnversity.nmap 10.10.21.79
 -v	Verbose mode
 -sU	UDP port scan
 -sS	TCP SYN port scan
+-PE tell Nmap to use ICMP Echo to discover live hosts
+-PM tell Nmap to use ICMP Address Mask to discover live hosts
+-PP tell Nmap to use ICMP Timestamp to discover live hosts
+-R query the DNS server even for offline hosts
+-n if you don’t want Nmap to the DNS server
+nmap -sL TARGETS gives a detailed list of the hosts that nmap will scan without scanning them.
+nmap -PP -sn MACHINE_IP/24 discover the online computers on the target machine subnet
+nmap -sL list_of_hosts.txt scan targets in a text file
+nmap -sL -n <target ips>
 
 GoBuster
 gobuster dir -u http://10.10.21.79:3333 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
