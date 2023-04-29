@@ -3,13 +3,17 @@ rCtrl + C = exit full screen mode
 
 sudo openvpn /home/chris/Downloads/cgoode1202.ovpn
 
-nmap -A -sC -sV -oN vulnversity.nmap 10.10.21.79
+nmap -A -sC -sV -oN <machine_ip>
 -sV	Attempts to determine the version of the services running
 -p <x> or -p-	Port scan for port <x> or scan all ports
 -Pn	Disable host discovery and just scan for open ports
 -A	Enables OS and version detection, executes in-build scripts for further enumeration
 -sC	Scan with the default nmap scripts
+--script default Scan with default NSE scripts. Considered useful for discovery and safe
+nmap -sC -sV -Pn <machine_ip> script scan with version detection that doesn't send ping probes
+nmap -script vuln -Pn <machine_ip> search for vulnerabilities using the nmap script engine (NSE)
 -v	Verbose mode
+-vv scan with more verbosity
 -sU	UDP port scan
 -sS	TCP SYN port scan
 -PE tell Nmap to use ICMP Echo to discover live hosts

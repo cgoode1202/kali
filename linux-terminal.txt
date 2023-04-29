@@ -15,8 +15,14 @@ sudo apt install
 // list all files + hidden files
 ls -a
 
+// show file type and access permission
+ls -l
+
 // displays bash command history (last 1000 commands)
 history
+
+// clears the terminal
+clear
 
 // create a new empty file
 touch <file name>
@@ -29,3 +35,21 @@ touch <file name>
 
 // search for a file
 locate <search text>
+
+// move files to a new location
+mv file "new file path"
+
+// renames the file
+mv filename new_file_name
+
+// deletes a file
+rm filename
+
+// remove a directory
+rmdir
+
+// creates a new directory in the pressent working directory or at the specified path
+mkdir directoryname
+
+// renames a directory
+mv
